@@ -1,6 +1,10 @@
 <?php
 
+require 'termitem.class.php';
+
 class DataProvider  {
+
+    public $file_path;
     
     function __construct($file_path) {
         $this -> file_path = $file_path; 
@@ -23,12 +27,12 @@ class DataProvider  {
       }
 
     function form_data() {
-        $json = get_data();
+        $json = $this -> get_data();
         return json_decode($json);
     }
 
     function get_term($term) {
-        $data = form_data();
+        $data = $this -> form_data();
         foreach ($data as $objekt) {
             if ($objekt->term == $term ) {
                 return ($objekt->term . ': ' . $objekt -> definition);
@@ -37,7 +41,7 @@ class DataProvider  {
     }
 
     function search_results($search) {
-        $data = form_data();
+        $data = $this -> form_data();
         $search_result = array_filter($data, function ($item) use ($search) {
             if (strpos($item->term, $search) !== false || strpos($item->definition, $search) !== false ) {
             return true;

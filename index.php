@@ -7,8 +7,10 @@ $view_bag = [
     'title' => 'Graceful words'
 ];
 
-view ('index', form_data());
+$data = new DataProvider (CONFIG['data_file']);
 
-echo CONFIG ['data_file'];
+view ('index', $data->form_data());
+
+
 
 
