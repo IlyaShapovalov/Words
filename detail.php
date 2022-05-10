@@ -8,6 +8,6 @@ $view_bag = [
     'title' => 'Detail page for ' . $term
 ];
 
-view ('detail', get_term($term));
+view ('detail', Data::get_term($term));
 
 

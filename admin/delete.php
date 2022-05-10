@@ -9,17 +9,7 @@ $data = form_data();
 ensure_user_is_auth();
 
 if (isset($_POST['delete'])) {
-    for ($i = 0; $i < count($data); $i++) { 
-        if ($data[$i]->term === $_POST['deleted-term']) {
-            unset($data[$i]);
-            break;   
-        }
-    }
-
-    $new_data = array_values($data);
-    
-    set_data ($new_data);
-    redirect( '/admin/admin.php');
+    Data::delete_term($_POST['deleted-term']);
 }
 
 $view_bag = [

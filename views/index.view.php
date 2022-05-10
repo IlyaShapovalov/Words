@@ -12,7 +12,7 @@
         <h3>Search list:</h3>
 
         <table  class="table">
-        <?php $found_items = search_results($_GET['search']);?>
+        <?php $found_items = Data::search_results($_GET['search']);?>
         <?php foreach ($found_items as $objekt): ?>
             <tr>
                <td> <a href="./detail.php?term=<?=$objekt->term?>"> <?=$objekt->term?></a> </td>

@@ -40,6 +40,26 @@ class DataProvider  {
         }
     }
 
+    function add_term ($term, $definition) {
+        $data = $this -> form_data();
+        $data[] = new TermItem ($term, $definition);
+        $this -> set_data ($data);
+        redirect( '/admin/admin.php');
+    }
+
+    function delete_term ($term) {
+        $data = $this -> form_data();
+        for ($i = 0; $i < count($data); $i++) { 
+            if ($data[$i]->term === $term) {
+                unset($data[$i]);
+                break;   
+            }
+        }
+        $new_data = array_values($data);
+        $this -> set_data ($new_data);
+        redirect( '/admin/admin.php');
+    }
+    
     function search_results($search) {
         $data = $this -> form_data();
         $search_result = array_filter($data, function ($item) use ($search) {
