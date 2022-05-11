@@ -32,6 +32,10 @@ class Data {
         return self::$box -> delete_term($term);
     }
 
+    static public function edit_term ($term) {
+        return self::$box -> edit_term($term);
+    }
+
     static public function search_results($search) {
         return self::$box -> search_results($search);
     }

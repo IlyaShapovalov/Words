@@ -59,6 +59,32 @@ class DataProvider  {
         $this -> set_data ($new_data);
         redirect( '/admin/admin.php');
     }
+
+    function edit_term ($term) {
+        global $view_bag;
+        $data = $this -> form_data();
+        if (isset($_POST['edit'])) {
+            foreach ($data as $object) {
+                if ($object->term == $_POST['original-term']) {
+                    $object->term = $_POST['edited-term'];
+                    $object->definition = $_POST['edited-description'];
+                    break;
+                }
+            }
+            $this -> set_data ($data);
+            redirect('./admin.php');
+        }
+        
+        if (isset($term)) {
+            foreach ($data as $object) {
+                if ($object->term == $_GET['key']) {
+                    $view_bag['term'] = $object->term;
+                    $view_bag['def'] = $object->definition;
+                    break;
+                }
+            }
+        }
+    }
     
     function search_results($search) {
         $data = $this -> form_data();
