@@ -1,10 +1,12 @@
 <?php
 
+require 'dataprovider.class.php';
+
 class Data {
 
     static private $box;
     
-    static public function start ($provider) {
+    static public function start (DataProvider $provider) {
         return self::$box = $provider;
     }
 
