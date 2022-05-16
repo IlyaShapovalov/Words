@@ -6,13 +6,21 @@ class MysqlDataBridge extends DataProvider  {
         try {
             return new PDO($this -> data_source, CONFIG['db_user'], CONFIG['db_password']); 
         } catch (PDOException $e) {
-            echo $e->getMessage();
+            echo $e -> getMessage();
             return null;
         }
     }
 
     public function form_data() {
+        $db = $this -> connect();
+
+        if ($db == null) {
+            return [];
+        }
         
+        $query = $db -> query('SELECT * FROM terms');
+        $data = $query -> fetchAll(PDO::FETCH_CLASS, 'TermItem');
+        return $data;
     }
 
     public function get_term($term) {
@@ -22,7 +30,7 @@ class MysqlDataBridge extends DataProvider  {
             return [];
         }
 
-        
+
        
     }
 

@@ -34,7 +34,10 @@ class FileDataBridge extends DataProvider  {
 
     function add_term ($term, $definition) {
         $data = $this -> form_data();
-        $data[] = new TermItem ($term, $definition);
+        $new_term = new TermItem;
+        $new_term -> term = $term;
+        $new_term -> definition = $definition;
+        $data[] = $new_term;
         $this -> set_data ($data);
         redirect( '/admin/admin.php');
     }
