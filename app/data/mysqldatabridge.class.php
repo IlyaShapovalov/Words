@@ -21,6 +21,8 @@ class MysqlDataBridge extends DataProvider  {
         if ($db == null) {
             return [];
         }
+
+        
        
     }
 
@@ -28,7 +30,7 @@ class MysqlDataBridge extends DataProvider  {
         $db = $this -> connect();
 
         if ($db == null) {
-            return [];
+            return;
         }
        
         $sql = 'INSERT INTO terms (term, definition) VALUES (:term, :definition)';
