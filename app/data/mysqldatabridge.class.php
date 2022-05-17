@@ -54,6 +54,20 @@ class MysqlDataBridge extends DataProvider  {
     }
 
     public function delete_term ($term) {
+        $db = $this -> connect();
+        if ($db == null) {
+            return;
+        }
+
+        $sql = 'DELETE FROM terms WHERE term = :term'; 
+        $statement = $db -> prepare($sql);
+        $statement -> execute([
+            ':term' => $term
+        ]);
+        $statement = null;
+        $db = null;
+        redirect('/admin/admin.php');
+
       
     }
 
