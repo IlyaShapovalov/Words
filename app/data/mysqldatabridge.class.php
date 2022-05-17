@@ -50,7 +50,7 @@ class MysqlDataBridge extends DataProvider  {
 
         $statement = null;
         $db = null;
-        
+        redirect('/admin/admin.php');
     }
 
     public function delete_term ($term) {
@@ -67,12 +67,35 @@ class MysqlDataBridge extends DataProvider  {
         $statement = null;
         $db = null;
         redirect('/admin/admin.php');
-
-      
     }
 
     public function edit_term ($term) {
-     
+        $db = $this -> connect();
+        if ($db == null) {
+            return;
+        }
+        global $view_bag;
+        if (isset($term)) {
+            $sql = 'SELECT * FROM terms WHERE term = :term';
+            $statement = $db -> prepare($sql); 
+            $statement -> execute([':term' => $term]);
+            $data = $statement -> fetchAll(PDO::FETCH_CLASS, 'TermItem');
+            $view_bag ['term'] = $data[0] -> term;
+            $view_bag ['def'] = $data[0] -> definition;
+        }
+        if (isset($_POST['edit'])){
+            $sql = 'UPDATE terms SET term = :term, definition = :definition WHERE term = :oterm';
+            $statement = $db -> prepare($sql);
+            $statement -> execute([
+                ':term' => $_POST['edited-term'],
+                ':definition' => $_POST['edited-description'],
+                ':oterm' => $_POST['original-term']
+            ]);
+            $statement = null;
+            $db = null;
+            redirect('/admin/admin.php');
+        }
+       
     }
     
     public function search_results($search) {
