@@ -99,6 +99,14 @@ class MysqlDataBridge extends DataProvider  {
     }
     
     public function search_results($search) {
-     
+        $db = $this -> connect();
+        if ($db == null) {
+            return;
+        }
+        $sql = 'SELECT * FROM terms WHERE term LIKE :search OR definition LIKE :search';
+        $statement = $db -> prepare($sql);
+        $statement -> execute([':search' => '%'.$search.'%']);
+        $data = $statement -> fetchAll(PDO::FETCH_CLASS, 'TermItem');
+        return $data;
     }
 }
