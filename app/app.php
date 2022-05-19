@@ -10,6 +10,10 @@ require 'data/mysqldatabridge.class.php';
 
 $_SESSION ['data_source'] = $_POST['source_switch'] ?? $_SESSION ['data_source'] ?? 'db';
 
+if (isset($_POST['switch'])) {
+    $_SESSION['data_source'] = source_switch($_SESSION['data_source']);
+}
+
 if ($_SESSION ['data_source'] == 'db') {
     Data::start(new MysqlDataBridge(CONFIG['dsn']));
 }

@@ -20,3 +20,7 @@ function view($name, $model = '') {
   require (APP_ROOT . "/views/layout.view.php");
 }
 
+function source_switch ($source) {
+  $source = ($source == 'db') ? 'json' : 'db';
+  return $source;
+}

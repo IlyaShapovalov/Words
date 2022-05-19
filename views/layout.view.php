@@ -22,14 +22,11 @@
             <a style=" font-family: Arial, Helvetica, sans-serif; padding-left:4rem;" href="/logout.php">Logout</a>
         </nav>
         <nav style="display: inline-block; margin-left:2rem;">
-             <form style="align-self: center;" action="" method="post">
-                <label for="db">db</label>
-                <input type="radio" name="source_switch" id="db" value="db">
-                <label for="json">json</label>
-                <input type="radio" name="source_switch" id="json" value="json">
-                <input type="submit" >
+            <form style="align-self: center;" action="" method="post">
+                <input type="hidden" value="switch" name="switch"/>
+                <input type="submit" value="SWITCH"/>
             </form>
         </nav>
-        <?php require "$name.view.php";  ?>
+        <?php require "$name.view.php"?>
     </body>
 </html>
