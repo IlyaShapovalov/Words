@@ -4,8 +4,6 @@ session_start();
 
 require_once ( '../app/app.php');
 
-ensure_user_is_auth();
-
 if (isset($_POST['create'])) {
     Data::add_term ($_POST['term'], $_POST['description']);
 }

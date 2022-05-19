@@ -18,8 +18,6 @@
             <br>
             <a style=" font-family: Arial, Helvetica, sans-serif; padding-left:4rem;" href="/index.php">Home</a>
             <a style=" font-family: Arial, Helvetica, sans-serif; padding-left:4rem;" href="/admin/admin.php">Admin</a>
-            <a style=" font-family: Arial, Helvetica, sans-serif; padding-left:4rem;" href="/login.php">Login</a>
-            <a style=" font-family: Arial, Helvetica, sans-serif; padding-left:4rem;" href="/logout.php">Logout</a>
         </nav>
         <nav style="display: inline-block; margin-left:2rem;">
             <form style="align-self: center;" action="" method="post">

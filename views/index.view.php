@@ -15,7 +15,7 @@
         <?php $found_items = Data::search_results($_GET['search']);?>
         <?php foreach ($found_items as $objekt): ?>
             <tr>
-               <td> <a href="./detail.php?term=<?=$objekt->term?>"> <?=$objekt->term?></a> </td>
+               <td><?=$objekt->term?></td>
                <td><?=$objekt->definition?></td>
             </tr>
         <?php endforeach;?>
@@ -28,7 +28,7 @@
     <table  class="table">
     <?php foreach ($model as $objekt): ?>
         <tr>
-            <td> <a href="./detail.php?term=<?=$objekt->term?>"> <?=$objekt->term?></a> </td>
+            <td><?=$objekt->term?></td>
             <td><?=$objekt->definition?></td>
         </tr>
     <?php endforeach;?>

@@ -2,7 +2,7 @@
 
 class FileDataBridge extends DataProvider  {
 
-    function get_data() {
+    public function get_data() {
         $fname = $this -> data_source;
         $json = '';
         if (!file_exists($fname)) {
@@ -13,26 +13,17 @@ class FileDataBridge extends DataProvider  {
         return $json;
     }
 
-    function set_data ($data) {
+    public function set_data ($data) {
         $json = json_encode($data);
         file_put_contents($this -> data_source, $json);
       }
 
-    function form_data() {
+    public function form_data() {
         $json = $this -> get_data();
         return json_decode($json);
     }
 
-    function get_term($term) {
-        $data = $this -> form_data();
-        foreach ($data as $objekt) {
-            if ($objekt->term == $term ) {
-                return ($objekt->term . ': ' . $objekt -> definition);
-            }
-        }
-    }
-
-    function add_term ($term, $definition) {
+    public function add_term ($term, $definition) {
         $data = $this -> form_data();
         $new_term = new TermItem;
         $new_term -> term = $term;
@@ -42,7 +33,7 @@ class FileDataBridge extends DataProvider  {
         redirect( '/admin/admin.php');
     }
 
-    function delete_term ($term) {
+    public function delete_term ($term) {
         $data = $this -> form_data();
         for ($i = 0; $i < count($data); $i++) { 
             if ($data[$i]->term === $term) {
@@ -55,7 +46,7 @@ class FileDataBridge extends DataProvider  {
         redirect( '/admin/admin.php');
     }
 
-    function edit_term ($term) {
+    public function edit_term ($term) {
         global $view_bag;
         $data = $this -> form_data();
         if (isset($_POST['edit'])) {
@@ -81,7 +72,7 @@ class FileDataBridge extends DataProvider  {
         }
     }
     
-    function search_results($search) {
+    public function search_results($search) {
         $data = $this -> form_data();
         $search_result = array_filter($data, function ($item) use ($search) {
             if (strpos($item->term, $search) !== false || strpos($item->definition, $search) !== false ) {

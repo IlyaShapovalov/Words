@@ -23,17 +23,6 @@ class MysqlDataBridge extends DataProvider  {
         return $data;
     }
 
-    public function get_term($term) {
-        $db = $this -> connect();
-
-        if ($db == null) {
-            return [];
-        }
-
-
-       
-    }
-
     public function add_term ($term, $definition) {
         $db = $this -> connect();
 
