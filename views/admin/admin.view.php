@@ -1,12 +1,12 @@
 <div>
     <br>
-    <form style=" font-family: Arial, Helvetica, sans-serif; padding-left:4rem;" action="" method="GET" >
+    <form  action="" method="GET" >
     <input type="text" name="search" id="search">
     <input type="submit" value="Search" >
     </form>
     <br>
 </div>
-<div style=" font-family: Arial, Helvetica, sans-serif; padding-left:4rem;">
+<div>
     <?php if (isset($_GET['search'])): ?>
         <br>
         <h3>Search list:</h3>
@@ -21,8 +21,7 @@
         </table>
     <?php endif;?>
 </div>
-
-<div style=" font-family: Arial, Helvetica, sans-serif; padding-left:4rem;">
+<div >
     <a href="./create.php">Add new term</a>
     <br> <br>
     <table  class="table">

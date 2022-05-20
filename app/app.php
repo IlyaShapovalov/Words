@@ -16,7 +16,9 @@ if (isset($_POST['switch'])) {
 
 if ($_SESSION ['data_source'] == 'db') {
     Data::start(new MysqlDataBridge(CONFIG['dsn']));
+    $view_bag = ['data_source' => 'db'];
 }
 elseif ($_SESSION ['data_source'] == 'json') {
-    Data::start(new FileDataBridge(CONFIG['data_file']));  
+    Data::start(new FileDataBridge(CONFIG['data_file']));
+    $view_bag = ['data_source' => 'json'];
 }

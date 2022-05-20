@@ -1,16 +1,15 @@
 <div>
     <br>
-    <form style=" font-family: Arial, Helvetica, sans-serif; padding-left:4rem;" action="" method="GET" >
+    <form  action="" method="GET" >
     <input type="text" name="search" id="search">
     <input type="submit" value="Search" >
     </form>
     <br>
 </div>
-<div style=" font-family: Arial, Helvetica, sans-serif; padding-left:4rem;">
+<div>
     <?php if (isset($_GET['search'])): ?>
         <br>
         <h3>Search list:</h3>
-
         <table  class="table">
         <?php $found_items = Data::search_results($_GET['search']);?>
         <?php foreach ($found_items as $objekt): ?>
@@ -22,8 +21,7 @@
         </table>
     <?php endif;?>
 </div>
-
-<div style=" font-family: Arial, Helvetica, sans-serif; padding-left:4rem;">
+<div>
     <br>
     <table  class="table">
     <?php foreach ($model as $objekt): ?>

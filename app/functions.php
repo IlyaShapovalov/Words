@@ -14,3 +14,8 @@ function source_switch ($source) {
   $source = ($source == 'db') ? 'json' : 'db';
   return $source;
 }
+
+function current_page() {
+  $current_page = basename($_SERVER['PHP_SELF'], ".php");
+  return $current_page;
+}

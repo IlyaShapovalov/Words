@@ -4,9 +4,7 @@ session_start();
 
 require_once ( '../app/app.php');
 
-$view_bag = [
-    'title' => 'Edit term'
-];
+$view_bag['title'] = 'Edit term';
 
 Data::edit_term($_GET['key']);
 
