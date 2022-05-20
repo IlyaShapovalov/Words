@@ -68,7 +68,6 @@ select {
 
 /* Utilities */
 
-
 .fc-white { color: var(--white);}
 .fc-main { color: var(--main);}
 
@@ -102,7 +101,7 @@ select {
 
 .flex {
   display: flex;
-  gap: 1rem;
+  gap: .1rem;
 }
 
 .flow > *:where(:not(:first-child)) {
@@ -147,6 +146,7 @@ select {
   color: var(--main);
   padding-bottom: 1em;
 }
+
 
 /* Switch block */
 
@@ -215,5 +215,39 @@ select {
   background-color:hsl(var(--hsl-main)/ .8);
 }
 
+
+/* Search */
+
+.search-container {
+  margin-top: 1.5rem;
+  width: 100%;
+  justify-content: center;
+
+}
+
+.search-container svg {
+  height: 2.5rem;
+  
+}
+
+.search-form {
+  justify-content: center;
+  width: 70%;
+  border-radius: 10px;
+  gap: 1rem;
+
+
+}
+
+.search-bar {
+  width: 80%;
+  height: 2.5rem;
+  border-radius: 10px;
+  border: 0;
+}
+
+.search-bar:focus {
+  border: none;
+}
 
 
