@@ -1,15 +1,12 @@
-
 /* Custom properties */
 
 :root {
-  
-  --main: #F68888;
-  --hsl-main:	0 85.9% 74.9%;
+  --main: #f68888;
+  --hsl-main: 0 85.9% 74.9%;
   --white: #ffffff;
   --dark: #292929;
   --light: #363636;
-  
-  
+
   --fs-900: clamp(3rem, 3.3rem, 3.7rem);
   --fs-800: 3.5rem;
   --fs-700: 1.5rem;
@@ -18,13 +15,11 @@
   --fs-400: 0.95rem;
   --fs-300: 0.9rem;
   --fs-200: 0.85rem;
-  
-  
+
   --ff-normal: "Roboto", sans-serif;
   --ff-cond: "IBM Plex Mono", sans-serif;
   --ff-fancy: "IBM Plex Sans", sans-serif;
 }
-
 
 /* Reset */
 
@@ -40,7 +35,7 @@ h2,
 ul,
 li,
 p {
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 
@@ -65,24 +60,49 @@ select {
   font: inherit;
 }
 
-
 /* Utilities */
 
-.fc-white { color: var(--white);}
-.fc-main { color: var(--main);}
+.fc-white {
+  color: var(--white);
+}
+.fc-main {
+  color: var(--main);
+}
 
-.ff-normal { font-family: var(--ff-normal); } 
-.ff-cond { font-family: var(--ff-cond); } 
-.ff-fancy { font-family: var(--ff-fancy); } 
+.ff-normal {
+  font-family: var(--ff-normal);
+}
+.ff-cond {
+  font-family: var(--ff-cond);
+}
+.ff-fancy {
+  font-family: var(--ff-fancy);
+}
 
-.fs-900 { font-size: var(--fs-900); }
-.fs-800 { font-size: var(--fs-800); }
-.fs-700 { font-size: var(--fs-700); }
-.fs-600 { font-size: var(--fs-600); }
-.fs-500 { font-size: var(--fs-500); }
-.fs-400 { font-size: var(--fs-400); }
-.fs-300 { font-size: var(--fs-300); }
-.fs-200 { font-size: var(--fs-200); }
+.fs-900 {
+  font-size: var(--fs-900);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
 
 .fs-900,
 .fs-800,
@@ -91,30 +111,40 @@ select {
   line-height: 1.1;
 }
 
-.letter-spacing-1 { letter-spacing: 3.5px; } 
-.letter-spacing-2 { letter-spacing: 2.8px; } 
-.letter-spacing-3 { letter-spacing: 2.3px; } 
+.letter-spacing-1 {
+  letter-spacing: 3.5px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.8px;
+}
+.letter-spacing-3 {
+  letter-spacing: 2.3px;
+}
 
-.bg-main { background-color: var(--main);}
-.bg-dark { background-color: var(--dark);}
-.bg-light { background-color: var(--light);}
+.bg-main {
+  background-color: var(--main);
+}
+.bg-dark {
+  background-color: var(--dark);
+}
+.bg-light {
+  background-color: var(--light);
+}
 
 .flex {
   display: flex;
-  gap: .1rem;
+  gap: 0.1rem;
 }
 
 .flow > *:where(:not(:first-child)) {
   margin-top: 1rem;
 }
 
-
 /* Compontents */
 
 .container {
   margin-inline: auto;
   width: 30rem;
-
 }
 
 /* Header */
@@ -125,10 +155,9 @@ select {
 }
 
 .navigation li {
-  padding-bottom: .5em;
-  margin-inline: .7em;
+  padding-bottom: 0.5em;
+  margin-inline: 0.7em;
   list-style: none;
-
 }
 
 .navigation a {
@@ -137,8 +166,8 @@ select {
 }
 
 .underline > .active {
-   border-bottom: .2rem solid var(--main);
-} 
+  border-bottom: 0.2rem solid var(--main);
+}
 
 .title {
   justify-content: center;
@@ -147,14 +176,13 @@ select {
   padding-bottom: 1em;
 }
 
-
 /* Switch block */
 
 .switch {
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
   grid-template-columns: 23% 5% 20% 1fr;
-  grid-template-rows:    20% 6% 1fr 1fr;
+  grid-template-rows: 20% 6% 1fr 1fr;
   grid-template-areas:
     "a a a a"
     "r r r r"
@@ -175,7 +203,7 @@ select {
   border-radius: 4px;
   max-width: 1.2rem;
   max-height: 1.2rem;
-  margin-top: .1rem;
+  margin-top: 0.1rem;
 }
 
 .switch-lamp-mysql {
@@ -183,7 +211,7 @@ select {
   border-radius: 4px;
   max-width: 1.2rem;
   max-height: 1.2rem;
-  margin-top: .1rem;
+  margin-top: 0.1rem;
 }
 
 .switch-json {
@@ -196,25 +224,24 @@ select {
   font-weight: 200;
 }
 
-.switch-form{
+.switch-form {
   grid-area: k;
-  padding-top: .3rem;
+  padding-top: 0.3rem;
 }
 
 .switch-submit {
   border: 0;
-  align-self: center; 
+  align-self: center;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   color: var(--white);
   font-weight: 200;
   background-color: var(--main);
 }
 
 .switch-submit:hover {
-  background-color:hsl(var(--hsl-main)/ .8);
+  background-color: hsl(var(--hsl-main) / 0.8);
 }
-
 
 /* Search */
 
@@ -222,12 +249,10 @@ select {
   margin-top: 1.5rem;
   width: 100%;
   justify-content: center;
-
 }
 
 .search-container svg {
   height: 2.5rem;
-  
 }
 
 .search-form {
@@ -235,8 +260,10 @@ select {
   width: 70%;
   border-radius: 10px;
   gap: 1rem;
+}
 
-
+.search-form:focus {
+  outline: var(--main) solid 1px;
 }
 
 .search-bar {
@@ -244,10 +271,9 @@ select {
   height: 2.5rem;
   border-radius: 10px;
   border: 0;
+  color: var(--white);
 }
 
 .search-bar:focus {
-  border: none;
+  outline: none;
 }
-
-
