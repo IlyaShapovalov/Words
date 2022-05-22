@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/index.css">
 </head>
 <body>
-    <main class="container ">
+    <main class="container">
         <header>
             <nav>
                 <ul class="flex navigation underline fs-700 ff-cond">
@@ -24,7 +24,9 @@
             </div>
         </header>
         <div class="bg-light switch">
-            <div class="ff-fancy fc-main fs-500 letter-spacing-2 switch-title">connected data source:</div>
+           <div class="grid-wraper flex">
+                <div class="ff-fancy fc-main fs-500 letter-spacing-2 switch-title">connected data source:</div>
+                </div>
             <div <?= $view_bag['data_source'] == 'db' ? 'class="switch-lamp-mysql bg-main"':''?>></div>
             <div class="switch-json ff-cond fs-600">MYSQL</div>
             <div <?= $view_bag['data_source'] == 'json' ? 'class="switch-lamp-json bg-main"':''?>></div>
@@ -32,6 +34,13 @@
             <form class="switch-form" action="" method="post">
                 <input type="hidden" value="switch" name="switch"/>
                 <input class="switch-submit fs-600" type="submit" value="SWITCH"/>
+            </form>
+        </div>
+        <div class="search-container flex">
+            <form class="flex bg-light search-form" action="" method="GET" >
+                <input class="search-bar bg-light"  placeholder="Search..."  type="text" name="search" id="search">
+                <input type="hidden" value="Search" >
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.7em" height="1.7em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="#f68888" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0a5.5 5.5 0 0 1 11 0z"/></svg>
             </form>
         </div>
         <?php require "$name.view.php"?>

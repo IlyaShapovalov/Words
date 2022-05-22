@@ -1,12 +1,4 @@
 <div>
-    <br>
-    <form  action="" method="GET" >
-    <input type="text" name="search" id="search">
-    <input type="submit" value="Search" >
-    </form>
-    <br>
-</div>
-<div>
     <?php if (isset($_GET['search'])): ?>
         <br>
         <h3>Search list:</h3>
