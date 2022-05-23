@@ -12,7 +12,7 @@
         </div>
     <?php endif;?>
 </div>
-<div class="flow">
+<div class="flow cards-home-an">
     <?php foreach ($model as $objekt): ?>
         <div  class="card bg-light">
             <h2 class="card-term fc-main fs-600 ff-fancy "><?=$objekt->term?></h2>

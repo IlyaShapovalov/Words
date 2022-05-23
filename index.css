@@ -8,9 +8,9 @@
   --light: #363636;
 
   --fs-900: clamp(3rem, 3.3rem, 3.7rem);
-  --fs-800: 3.5rem;
+  --fs-800: 2.5rem;
   --fs-700: 1.5rem;
-  --fs-600: 1.3rem;
+  --fs-600: 1.2rem;
   --fs-500: 1rem;
   --fs-400: 0.95rem;
   --fs-300: 0.9rem;
@@ -118,7 +118,7 @@ select {
   letter-spacing: 2px;
 }
 .letter-spacing-3 {
-  letter-spacing: normal;
+  letter-spacing: 1px;
 }
 
 .bg-main {
@@ -182,7 +182,7 @@ select {
   display: grid;
   gap: 0.5rem;
   grid-template-columns: 23% 5% 20% 1fr;
-  grid-template-rows: 20% 6% 1fr 1fr;
+  grid-template-rows: 25% 6% 1fr 1fr;
   grid-template-areas:
     "a a a a"
     "r r r r"
@@ -203,7 +203,7 @@ select {
 
 .switch-title {
   color: var(--white);
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .switch-lamp-json {
@@ -302,4 +302,69 @@ select {
 
 .card-definition {
   text-align: justify;
+  font-weight: 300;
+}
+
+.add-term {
+  text-decoration: none;
+}
+
+.def-link {
+  text-decoration: none;
+}
+
+.link-wraper {
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin-top: .5rem;
+}
+
+.links-an {
+  animation: 1s links ease-out ;
+}
+
+@keyframes links {
+  0% {
+    opacity: 0;
+    transform: translateY(.6rem);
+  }
+  20% {
+    opacity: .7;
+  }
+  50% {
+    opacity: .8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cards-admin-an {
+  animation: 1s cards-admin ease-out ;
+}
+
+@keyframes cards-admin {
+  0% {
+    transform: translateY(-3rem);
+  }
+}
+
+.add-an {
+  animation: 1.7s add-link ease-out ;
+}
+
+@keyframes add-link {
+  0% {
+    opacity: 0;
+  }
+}
+
+.cards-home-an {
+  animation: 1s cards-home-admin ease-out ;
+}
+
+@keyframes cards-home-admin {
+  0% {
+    transform: translateY(2.5rem);
+  }
 }
