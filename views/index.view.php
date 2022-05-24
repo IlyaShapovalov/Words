@@ -8,9 +8,9 @@
                     <h2 class="card-term fc-main fs-600 ff-fancy "><?=$objekt->term?></h2>
                     <p class="card-definition fs-500 letter-spacing-3"><?=$objekt->definition?></p>
                 </div>  
-            <?php endforeach;?>
+            <?php endforeach ?>
         </div>
-    <?php endif;?>
+    <?php endif ?>
 </div>
 <div class="flow cards-home-an">
     <?php foreach ($model as $objekt): ?>
@@ -18,5 +18,5 @@
             <h2 class="card-term fc-main fs-600 ff-fancy "><?=$objekt->term?></h2>
             <p class="card-definition fs-500 letter-spacing-3"><?=$objekt->definition?></p>
         </div>
-    <?php endforeach;?>
+    <?php endforeach ?>
 </div>
