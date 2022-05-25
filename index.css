@@ -146,6 +146,7 @@ select {
 margin-bottom: 1.5rem;
 }
 
+
 /* Compontents */
 
 .container {
@@ -463,5 +464,30 @@ margin-bottom: 1.5rem;
 .crud-message span {
   text-transform: lowercase;
   color: var(--white);
+}
 
+.delete-submit {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  justify-content:center;
+}
+
+.delete-submit-button {
+  justify-self: center;
+  width: 50%;
+  border: 0;
+  align-self: center;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, .25);
+  padding: .5rem 1rem;
+  color: var(--white);
+  font-weight: 200;
+  background-color: var(--main);
+  border-radius: 5px;
+  margin-bottom: 3rem;
+}
+
+.delete-submit-button:hover {
+  background-color: hsl(var(--hsl-main) / .8);
 }

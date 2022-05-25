@@ -76,7 +76,7 @@ class FileDataBridge extends DataProvider  {
         $data = $this -> form_data();
         if ($search) {
             $search_result = array_filter($data, function ($item) use ($search) {
-                if (strpos($item->term, $search) !== false || strpos($item->definition, $search) !== false ) {
+                if (stripos($item->term, $search) !== false || stripos($item->definition, $search) !== false ) {
                 return true;
                 }
             });
