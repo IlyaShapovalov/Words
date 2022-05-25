@@ -466,19 +466,19 @@ margin-bottom: 1.5rem;
   color: var(--white);
 }
 
-.delete-submit {
+.submit-group {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  justify-content:center;
+
 }
 
-.delete-submit-button {
+.submit-button {
   justify-self: center;
   width: 50%;
   border: 0;
-  align-self: center;
+  /* align-self: center; */
   box-shadow: 2px 4px 4px rgba(0, 0, 0, .25);
   padding: .5rem 1rem;
   color: var(--white);
@@ -488,6 +488,6 @@ margin-bottom: 1.5rem;
   margin-bottom: 3rem;
 }
 
-.delete-submit-button:hover {
+.submit-button:hover {
   background-color: hsl(var(--hsl-main) / .8);
 }
