@@ -218,17 +218,17 @@ margin-bottom: 1.5rem;
 .switch-lamp-json {
   grid-area: b;
   border-radius: 4px;
-  max-width: 1.2rem;
-  max-height: 1.2rem;
-  margin-top: .1rem;
+  max-width: 1.1rem;
+  max-height: 1.1rem;
+  margin-top: .2rem;
 }
 
 .switch-lamp-mysql {
   grid-area: f;
   border-radius: 4px;
-  max-width: 1.2rem;
-  max-height: 1.2rem;
-  margin-top: .1rem;
+  max-width: 1.1rem;
+  max-height: 1.1rem;
+  margin-top: .2rem;
 }
 
 .switch-json {
