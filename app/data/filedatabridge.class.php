@@ -74,11 +74,14 @@ class FileDataBridge extends DataProvider  {
     
     public function search_results($search) {
         $data = $this -> form_data();
-        $search_result = array_filter($data, function ($item) use ($search) {
-            if (strpos($item->term, $search) !== false || strpos($item->definition, $search) !== false ) {
-            return true;
-            }
-        });
-        return $search_result;
+        if ($search) {
+            $search_result = array_filter($data, function ($item) use ($search) {
+                if (strpos($item->term, $search) !== false || strpos($item->definition, $search) !== false ) {
+                return true;
+                }
+            });
+            return $search_result;
+        }
+        else return ($data); 
     }
 }

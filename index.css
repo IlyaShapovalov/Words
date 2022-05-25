@@ -9,7 +9,7 @@
 
   --fs-900: clamp(3rem, 3.3rem, 3.7rem);
   --fs-800: 2.5rem;
-  --fs-700: 1.5rem;
+  --fs-700: 1.4rem;
   --fs-600: 1.2rem;
   --fs-500: 1rem;
   --fs-400: .95rem;
@@ -142,6 +142,9 @@ select {
   margin-top: 1rem;
 }
 
+.flow:last-child {
+margin-bottom: 1.5rem;
+}
 
 /* Compontents */
 
@@ -434,6 +437,7 @@ select {
   font-weight: 200;
   background-color: var(--main);
   border-radius: 5px;
+  margin-bottom: 3rem;
 }
 
 .crud-form-submit:hover {
@@ -448,4 +452,16 @@ select {
   0% {
     transform: translateY(1.5rem);
   }
+}
+
+.crud-message {
+  font-weight: 300;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.crud-message span {
+  text-transform: lowercase;
+  color: var(--white);
+
 }

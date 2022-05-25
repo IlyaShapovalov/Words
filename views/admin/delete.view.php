@@ -1,9 +1,7 @@
-<div>
-    <h4>Do you realy want to delete this term?</h4>
-    <form action="" method="post">
-        <div class="form-group">
-            <input type="hidden" value="<?= $_GET['delete'] ?>" name="deleted-term" />    
-            <input type="submit" name="delete" value="Delete" >
-        </div>
+<div class="flex crud-wraper">
+    <h2 class="ff-fancy fs-700 fc-main crud-message">Do you really think <span><?= $_GET['delete'] ?></span> is not graceful enough?</h2>
+    <form  class="crud-form " method="post">
+        <input type="hidden" value="<?= $_GET['delete'] ?>" name="deleted-term" />    
+        <input class="crud-form-submit fs-600" type="submit" name="delete" value="DELETE" >
     </form>
 </div>
