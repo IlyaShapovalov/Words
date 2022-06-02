@@ -26,8 +26,8 @@ class FileDataBridge extends DataProvider  {
     public function add_term ($term, $definition) {
         $data = $this -> form_data();
         $new_term = new TermItem;
-        $new_term -> term = $term;
-        $new_term -> definition = $definition;
+        $new_term -> term = sanitize($term);
+        $new_term -> definition = sanitize($definition);
         $data[] = $new_term;
         $this -> set_data ($data);
         redirect( '/admin/admin.php');
@@ -52,8 +52,8 @@ class FileDataBridge extends DataProvider  {
         if (isset($_POST['edit'])) {
             foreach ($data as $object) {
                 if ($object->term == $_POST['original-term']) {
-                    $object->term = $_POST['edited-term'];
-                    $object->definition = $_POST['edited-description'];
+                    $object->term = sanitize($_POST['edited-term']);
+                    $object->definition = sanitize($_POST['edited-description']);
                     break;
                 }
             }
